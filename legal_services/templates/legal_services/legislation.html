@@ -1,0 +1,123 @@
+{% extends 'legal_services/base.html'%}
+{% load static %}
+{% block content %}
+
+        <!-- Page Title -->
+        <div class="page-title-area title-img-one">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="page-title-text">
+                        <h2></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Title -->
+
+        <!-- Attorney Details -->
+        <div class="attorney-details pt-100 pb-70">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="attor-details-item">
+                            <img src="{% static 'assets/img/home-one/IMG_2746 (1).JPG'%}" alt="Details">
+                            <div class="attor-details-left">
+                                <div class="attor-social">
+                                    <ul>
+                                        <li>
+                                            <a href="https://vk.com/katerinafrolova94" target="_blank">
+                                                <i class="icofont-vk"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/katerina7825?igsh=djEzYTF1YjVmczk%3D&utm_source=qr" target="_blank">
+                                                <i class="icofont-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://t.me/katerina7825" target="_blank">
+                                                <i class="icofont-telegram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://wa.me/+79196282428" target="_blank">
+                                                <i class="icofont-whatsapp"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="attor-social-details">
+                                    <h3>Контакты</h3>
+                                    <ul>
+                                        <li>
+                                            <i class="flaticon-call"></i>
+                                            <a href="tel:+79111111111">
+                                               +7 919 628 24 28
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-email"></i>
+                                            <a href="mailto:info@frolovalaw.ru">
+                                                info@frolovalaw.ru
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="attor-details-item">
+                            <div class="attor-details-right">
+                                <div class="attor-details-name">
+                                    <h2>Обсудим новое в законодательстве</h2>
+                                </div>
+                                <div class="attor-details-things">
+                                    <p>На данном сайте Вас приветствует команда юристов и я ее руководитель - Фролова Екатерина. Тут Вы можете обратиться к нам онлайн, изложив обстоятельства вопроса и получить обратную связь в виде сообщения, или же заказать обратный звонок. Вы также можете позвонить нам сами и мы назначим встречу.
+Наша задача - помочь физическим и юридическим лицам в волнующих их вопросах и спорах, сделать так, чтобы закон полностью защитил их права..</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Attorney Details -->
+
+<!-- Blog -->
+
+<section class="blog-area blog-area-two pt-100">
+    <div class="container">
+        <div class="row">
+            {% for object in objects %}
+                <div class="col-sm-6 col-lg-4">
+                    <div class="blog-item wow fadeInUp" data-wow-delay=".3s">
+                        <a href="blog-details.html">
+                            <img src="{{ object.image.url }}" alt="Blog">
+                        </a>
+                        <div class="blog-inner">
+                            <h3>
+                                <a href="{% url 'legal_services:blog_details' object.pk %}">{{ object.title }}</a>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <i class="icofont-calendar"></i>
+                                    {{ object.created_at }}
+                                </li>
+                            </ul>
+                            <p>{{ object.description|truncatewords:30 }}</p>
+                            <a class="blog-link" href="{% url 'legal_services:blog_details' object.pk %}">
+                                Подробнее
+                                <i class="icofont-simple-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <p>Пока нет записей.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

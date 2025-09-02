@@ -1,0 +1,112 @@
+{% extends 'legal_services/base.html'%}
+{% load static %}
+{% block content %}
+
+
+        <!-- Page Title -->
+        <div class="page-title-area page-title-area-two title-img-one">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="page-title-text">
+                        <h2>Контакты</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Title -->
+
+        <!-- Contact Form -->
+        <div class="contact-form contact-form-four pb-100">
+            <!-- Location -->
+            <div class="loaction-area">
+                <div class="container">
+                    <div class="row location-bg">
+
+                        <div class="col-sm-6 col-lg-6">
+                            <div class="location-item">
+                                <div class="location-icon">
+                                    <i class="flaticon-call"></i>
+                                </div>
+                                <h3>Номер телефона</h3>
+                                <ul>
+                                    <li>
+                                        <a href="tel:+79111111111">+7 919 628 24 28</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-6">
+                            <div class="location-item">
+                                <div class="location-icon">
+                                    <i class="flaticon-email"></i>
+                                </div>
+                                <h3>Email</h3>
+                                <ul>
+                                    <li>
+                                        <a href="mailto:info@frolovalaw.ru">info@frolovalaw.ru</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Location -->
+
+            <div class="contact-form contact-form-two contact-form-three">
+            <div class="container">
+                <div class="contact-wrap">
+                    <form method="post">
+                        {% csrf_token %}
+                        <h2>Онлайн консультация</h2>
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="form-group">
+                                    {{ form.name }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="form-group">
+                                    {{ form.email }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="form-group">
+                                    {{ form.phone_number }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="form-group">
+                                    {{ form.msg_subject }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    {{ form.message }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-lg-12">
+                                <div class="text-center">
+                                    <button type="submit" class="contact-btn">Отправить</button>
+                                </div>
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- End Contact Form -->
+{% endblock %}

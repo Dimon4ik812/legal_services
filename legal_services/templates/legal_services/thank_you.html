@@ -1,0 +1,21 @@
+{% extends 'legal_services/base.html'%}
+{% load static %}
+{% block content %}
+        <!-- 404 -->
+        <section class="error-area">
+            <div class="error-item">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="error-text">
+<!--                            <h1>Спасибо</h1>-->
+                            <p>Ваша письмо успешно отправлена</p>
+                            <span>Мы свяжемся с вами в ближайшее время..</span>
+                            <a href="{% url 'legal_services:home' %}">На главную</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End 404 -->
+
+  {% endblock %}

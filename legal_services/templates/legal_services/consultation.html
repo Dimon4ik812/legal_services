@@ -1,0 +1,84 @@
+{% extends 'legal_services/base.html'%}
+{% load static %}
+{% block content %}
+
+        <!-- Page Title -->
+        <div class="page-title-area title-img-one">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="page-title-text">
+                        <h2>Онлайн консультация</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Title -->
+
+        <!-- Team -->
+        <section class="team-area team-area-three pt-100">
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+        </section>
+        <!-- End Team -->
+
+        <!-- Contact Form -->
+        <div class="contact-form contact-form-two contact-form-three">
+            <div class="container">
+                <div class="contact-wrap">
+                    <form method="post">
+                        {% csrf_token %}
+                        <h2>Онлайн консультация</h2>
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="form-group">
+                                    {{ form.name }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="form-group">
+                                    {{ form.email }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="form-group">
+                                    {{ form.phone_number }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-lg-6">
+                                <div class="form-group">
+                                    {{ form.msg_subject }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    {{ form.message }}
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 col-lg-12">
+                                <div class="text-center">
+                                    <button type="submit" class="contact-btn">Отправить</button>
+                                </div>
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Contact Form -->
+
+{% endblock %}

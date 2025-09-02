@@ -1,0 +1,34 @@
+[project]
+name = "legal-services"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "macbook",email = "kriukov@pos-credir.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django (>=5.2.4,<6.0.0)",
+    "psycopg2-binary (>=2.9.10,<3.0.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "pillow (>=11.3.0,<12.0.0)",
+    "redis (>=6.2.0,<7.0.0)",
+    "ipython (>=9.4.0,<10.0.0)",
+    "gunicorn (>=23.0.0,<24.0.0)",
+    "requests (>=2.32.4,<3.0.0)",
+    "black (>=25.1.0,<26.0.0)",
+    "mypy (>=1.16.1,<2.0.0)",
+    "isort (>=6.0.1,<7.0.0)",
+    "flake8 (>=7.3.0,<8.0.0)",
+    "django-imagekit (>=5.0.0,<6.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+    { include = "legal_services" },
+]

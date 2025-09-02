@@ -1,0 +1,130 @@
+{% load static %}
+<!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="footer-item">
+                            <div class="footer-logo">
+                                <a href="#">
+                                    <img src="{% static 'assets/img/логотип.png'%}" alt="Logo">
+                                </a>
+                                <p>Наша команда юристов всегда готова предоставить вам наилучшие и эффективные услуги. Если вы хотите узнать больше о нас и нашей фирме, свяжитесь с нами в социальных сетях</p>
+                                <ul>
+                                    <li>
+                                        <a href="https://t.me/katerina7825" target="_blank">
+                                            <i class="icofont-telegram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/katerina7825?igsh=djEzYTF1YjVmczk%3D&utm_source=qr" target="_blank">
+                                            <i class="icofont-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/+79196282428" target="_blank">
+                                            <i class="icofont-whatsapp"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://vk.com/katerinafrolova94" target="_blank">
+                                            <i class="icofont-vk"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="footer-item">
+                            <div class="footer-service">
+                                <h3>Услуги</h3>
+                                <ul>
+                                    <li>
+                                        <a href="{% url 'legal_services:individuals' %}">
+                                            <i class="icofont-simple-right"></i>
+                                            Физическим лицам
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'legal_services:legal' %}">
+                                            <i class="icofont-simple-right"></i>
+                                            Юридическим лицам
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-2">
+                        <div class="footer-item">
+                            <div class="footer-service">
+                                <h3>Ссылки</h3>
+                                <ul>
+                                    <li>
+                                        <a href="{% url 'legal_services:home' %}">
+                                            <i class="icofont-simple-right"></i>
+                                            Главная
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'legal_services:about' %}">
+                                            <i class="icofont-simple-right"></i>
+                                            О нас
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'legal_services:legislation' %}">
+                                            <i class="icofont-simple-right"></i>
+                                            Поговорим о законодательстве
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'legal_services:privacy_policy' %}">
+                                            <i class="icofont-simple-right"></i>
+                                            Политика конфиденциальности
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="footer-item">
+                            <div class="footer-find">
+                                <h3>Контакты</h3>
+                                <ul>
+<!--                                    <li>-->
+<!--                                        <i class="icofont-location-pin"></i>-->
+<!--                                        Набережные-Челны-->
+<!--                                    </li>-->
+                                    <li>
+                                        <i class="icofont-ui-call"></i>
+                                        <a href="tel:+79111111111">+7 919 628 24 28</a>
+                                    </li>
+                                    <li>
+                                        <i class="icofont-at"></i>
+                                        <a href="mailto:hello@lyzo.com">info@frolovalaw.ru</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright-area">
+                    <div class="row">
+                        <div class="col-sm-7 col-lg-6">
+                            <div class="copyright-item">
+                                <p>Авторское право ©2025. создано студией <a href="https://t.me/dimon4ik812" target="_blank">Дмитрия Крюкова</a></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 col-lg-6">
+                            <div class="copyright-item copyright-right">
+                                <a href="{% url 'legal_services:privacy_policy' %}" target="_blank">Политика конфиденциальности</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->

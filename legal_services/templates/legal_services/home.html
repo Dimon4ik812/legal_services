@@ -1,0 +1,199 @@
+{% extends 'legal_services/base.html'%}
+{% load static %}
+{% block content %}
+<!-- Banner -->
+        <div class="banner-area banner-img-one">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="banner-item">
+                                    <div class="banner-left">
+                                        <h1>Здесь закон становиться Вашей защитой</h1>
+                                        <p>Наша команда профессиональных юристов стремится к вашему прогрессу и достижению вашей цели. Наша юридическая фирма помогает клиентам в различных сложных делах и добивается справедливости</p>
+                                        <a>
+                                            <div style="background-color: #D2B48C; padding: 20px;">
+                                        <button type="button" class="btn" onclick="testModal()">
+                                            Обратный звонок
+                                            <i class="icofont-arrow-right"></i>
+                                        </button>
+                                                </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="banner-item">
+                                    <div class="banner-right">
+                                        <img class="banner-animation" src="{% static 'assets/img/home-one/IMG_2681.JPG'%}" alt="Banner">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Banner -->
+
+        <!-- Help -->
+        <div class="help-area pb-70">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="help-item help-left">
+                            <img src="{% static 'assets/img/home-one/IMG_2764.JPG'%}" alt="Help">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="help-item">
+                            <div class="help-right">
+                                <h2>Мы открыты для диалога и всегда придем на помощь.
+Теперь Ваша проблема - это наша проблема. </h2>
+                                <p>На данном сайте Вас приветствует команда юристов и я ее руководитель - Фролова Екатерина. Тут Вы можете обратиться к нам онлайн, изложив обстоятельства вопроса, и получить обратную связь в виде сообщения, или же заказать обратный звонок. Вы также можете позвонить нам сами и мы назначим встречу.</p>
+                                <p>Наша задача - помочь физическим и юридическим лицам в волнующих их вопросах и спорах, сделать так, чтобы закон полностью защитил их права.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="help-shape">
+                    <img src="{% static 'assets/img/home-one/6.png'%}" alt="Shape">
+                </div>
+            </div>
+        </div>
+        <!-- End Help -->
+
+        <!-- Practice -->
+        <section class="practice-area pt-100 pb-70">
+            <div class="container">
+                <div class="section-title">
+                    <span>КАК МЫ МОЖЕМ ВАМ ПОМОЧЬ?</span>
+                    <h2>Наши направления юридической практики</h2>
+                </div>
+                <div class="row equal-height">
+                    <div class="col-sm-6 ">
+                        <div class="practice-item">
+                            <div class="practice-icon">
+                                <i class="flaticon-law"></i>
+                            </div>
+                            <h3>Юридическим лицам</h3>
+                            <p>Честно оценить риски, рассказать о перспективах и добиться желаемого результата - наша главная задача!</p>
+                            <a href="{% url 'legal_services:legal' %}">Подробнее</a>
+                            <img class="practice-shape-one" src="{% static 'assets/img/home-one/7.png'%}" alt="Shape">
+                            <img class="practice-shape-two" src="{% static 'assets/img/home-one/8.png'%}" alt="Shape">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="practice-item">
+                            <div class="practice-icon">
+                                <i class="flaticon-family"></i>
+                            </div>
+                            <h3>Физическим лицам</h3>
+                            <p>Теперь Ваша проблема - это наша проблема.</p>
+                            <a href="{% url 'legal_services:individuals' %}">Подробнее</a>
+                            <img class="practice-shape-one" src="{% static 'assets/img/home-one/7.png'%}" alt="Shape">
+                            <img class="practice-shape-two" src="{% static 'assets/img/home-one/8.png'%}" alt="Shape">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- End Practice -->
+
+        <!-- Expertise -->
+        <section class="expertise-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Текст и иконки -->
+            <div class="col-lg-6">
+                <div class="section-title text-left">
+                    <span>НАША ЭКСПЕРТИЗА</span>
+                    <h2>Мы в социальных сетях</h2>
+                </div>
+                <div class="expertise-item">
+                    <ul>
+                        <li class="wow fadeInUp" data-wow-delay=".3s">
+                            <div class="expertise-icon">
+                                <i class="icofont-instagram"></i>
+                                <img src="{% static 'assets/img/home-one/11.png' %}" alt="Shape">
+                            </div>
+                            <h3><a href="https://www.instagram.com/katerina7825?igsh=djEzYTF1YjVmczk%3D&utm_source=qr" target="_blank">Instagram</a></h3>
+                            <p>Команда «Фролова и Ко» невероятно профессиональны, понимают ситуацию своих клиентов и поддерживают их до достижения победы.</p>
+                        </li>
+
+                        <li class="wow fadeInUp" data-wow-delay=".4s">
+                            <div class="expertise-icon">
+                                <i class="icofont-vk"></i>
+                                <img src="{% static 'assets/img/home-one/11.png' %}" alt="Shape">
+                            </div>
+                            <h3><a href="https://vk.com/katerinafrolova94" target="_blank">VK</a></h3>
+                            <p>Наши юристы креативны и опытны, и это помогает им находить множество решений для победы.</p>
+                        </li>
+
+                        <li class="wow fadeInUp" data-wow-delay=".5s">
+                            <div class="expertise-icon">
+                                <i class="icofont-telegram"></i>
+                                <img src="{% static 'assets/img/home-one/11.png' %}" alt="Shape">
+                            </div>
+                            <h3><a href="https://t.me/ваш_канал" target="_blank">Telegram</a></h3>
+                            <p>Индивидуальный подход к каждому клиенту на пути к цели.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Фото -->
+            <div class="col-lg-6">
+                <div class="expertise-image">
+                    <img src="{% static 'assets/img/home-one/IMG_2755.JPG' %}" alt="Expertise">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- End Expertise -->
+
+
+        <!-- Blog -->
+        <section class="blog-area pt-100">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Обсудим новое в законодательстве</h2>
+                </div>
+                <div class="blog-slider owl-theme owl-carousel">
+                    {% for object in objects %}
+                    <div class="blog-item">
+                        <a href="blog-details.html">
+                            <img src="{{ object.image.url }}" alt="Blog">
+                        </a>
+                        <div class="blog-inner">
+                            <h3>
+                                <a href="{% url 'legal_services:blog_details' object.pk %}">{{ object.title }}</a>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <i class="icofont-calendar"></i>
+                                    {{ object.created_at|date:"D, j F Y" }}
+                                </li>
+                            </ul>
+                            <p>{{ object.description|truncatewords:30 }}</p>
+                            <a class="blog-link" href="{% url 'legal_services:blog_details' object.pk %}">
+                                Подробнее
+                                <i class="icofont-simple-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    {% empty %}
+        <p>Пока нет записей.</p>
+    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Blog -->
+
+{% endblock %}
+

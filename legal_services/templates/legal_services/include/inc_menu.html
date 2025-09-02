@@ -1,0 +1,72 @@
+{% load static %}
+<!-- Preloader -->
+        <div class="loader">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="sk-folding-cube">
+                        <div class="sk-cube1 sk-cube"></div>
+                        <div class="sk-cube2 sk-cube"></div>
+                        <div class="sk-cube4 sk-cube"></div>
+                        <div class="sk-cube3 sk-cube"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+
+        <!-- Navbar -->
+        <div class="navbar-area fixed-top">
+            <!-- Menu For Mobile Device -->
+            <div class="mobile-nav">
+                <a href="index.html" class="logo">
+                    <img src="{% static 'assets/img/логотип.png'%}" alt="Logo">
+                </a>
+            </div>
+
+            <!-- Menu For Desktop Device -->
+            <div class="main-nav">
+                <div class="container">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="{% static 'assets/img/логотип.png'%}" alt="Logo">
+                        </a>
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="{% url 'legal_services:home' %}" class="nav-link dropdown-toggle active">Главная</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'legal_services:about' %}" class="nav-link">О Нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">Услуги</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="{% url 'legal_services:individuals' %}" class="nav-link">Физическим лицам</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{% url 'legal_services:legal' %}" class="nav-link">Юридическим лицам</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">Законодательство</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="{% url 'legal_services:legislation' %}" class="nav-link">Обсудим новое в законодательстве</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'legal_services:contact' %}" class="nav-link">Контакты</a>
+                                </li>
+                            </ul>
+                            <div class="side-nav">
+                                <a href="{% url 'legal_services:consultation' %}">Онлайн консультация</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar -->
