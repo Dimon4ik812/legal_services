@@ -2,7 +2,7 @@
 FROM python:3.13
 
 # Установка Poetry
-RUN curl -sSL https://install.python-poetry.org | python -
+RUN curl -sSL https://install.python-poetry.org | python3 -
 ENV PATH="/root/.local/bin:${PATH}"
 ENV POETRY_VIRTUALENVS_CREATE=false
 
