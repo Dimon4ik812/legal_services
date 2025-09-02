@@ -20,7 +20,14 @@ DEBUG = True if os.getenv("DEBUG") == "True" else False
 
 handler404 = 'legal_services.views.Error404View.as_view()'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://frolovalaw.ru',
+    'https://www.frolovalaw.ru',
+    'http://фроловаправо.рф',
+    'http://www.фроловаправо.рф',
+]
 
 
 # Application definition
@@ -141,3 +148,5 @@ ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD')
 
 SERVER_EMAIL = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
