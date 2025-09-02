@@ -1,10 +1,13 @@
 # Базовый образ
 FROM python:3.13
 
-# Установка Poetry и немедленное обновление PATH
-RUN curl -sSL https://install.python-poetry.org | python3 - \
-    && export PATH="/root/.local/bin:$PATH" \
-    && echo "PATH updated"
+# Установка Poetry
+RUN curl -sSL https://install.python-poetry.org -o get-poetry.py
+RUN python3 get-poetry.py --version
+RUN python3 get-poetry.py
+RUN ls -la /root/.local/bin/
+RUN ls -la ~/.local/bin/poetry || echo "Файл poetry не найден"
+RUN which poetry || find / -name poetry 2>/dev/null || echo "poetry нигде не найден"
 
 # Явно добавляем в PATH (на случай, если предыдущий export не сохранился)
 ENV PATH="/root/.local/bin:${PATH}"
