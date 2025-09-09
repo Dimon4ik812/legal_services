@@ -60,8 +60,12 @@
                                 <li class="nav-item">
                                     <a href="{% url 'legal_services:contact' %}" class="nav-link">Контакты</a>
                                 </li>
+                                <!-- Кнопка "Онлайн консультация" — только для мобильных -->
+                                <li class="nav-item d-block d-lg-none">
+                                    <a href="{% url 'legal_services:consultation' %}" class="nav-link">Онлайн консультация</a>
+                                </li>
                             </ul>
-                            <div class="side-nav">
+                            <div class="side-nav d-none d-lg-block">
                                 <a href="{% url 'legal_services:consultation' %}">Онлайн консультация</a>
                             </div>
                         </div>
