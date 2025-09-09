@@ -30,7 +30,7 @@
     overflow-y: scroll;
   }
   .side-nav {
-    display: none;
+    display: block;
   }
   /*-- End Navbar --*/
   /*-- Banner --*/
@@ -1070,7 +1070,7 @@
     overflow-y: scroll;
   }
   .side-nav {
-    display: none;
+    display: block;
   }
   /*-- End Navbar --*/
   /*-- Banner --*/
