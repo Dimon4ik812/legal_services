@@ -4114,3 +4114,14 @@ footer .copyright-area .copyright-right {
     padding-bottom: 30px;
     border-top: 1px solid #565655;
 }
+
+/* Стиль для пункта меню на мобильных */
+.nav-item.d-block.d-lg-none a.nav-link {
+    background-color: #b69d74;
+    color: #ffffff !important;
+    text-align: center;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 10px 15px;
+}
