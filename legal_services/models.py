@@ -5,8 +5,8 @@ from imagekit.processors import ResizeToFill
 
 class Legislation(models.Model):
     """модель законодательство"""
-    title = models.CharField(max_length=100, verbose_name="Заголовок")
-    description = models.CharField(max_length=500, verbose_name="описание законодательства")
+    title = models.CharField(max_length=500, verbose_name="Заголовок")
+    description = models.CharField(max_length=15000, verbose_name="описание законодательства")
     created_at = models.DateField(auto_now_add=True)
     image = ProcessedImageField(
         upload_to='photos/',
