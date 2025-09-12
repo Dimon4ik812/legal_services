@@ -4125,3 +4125,12 @@ footer .copyright-area .copyright-right {
     border-radius: 8px;
     margin: 10px 15px;
 }
+
+/* Мобильные устройства: экраны до 768px */
+@media (max-width: 768px) {
+    .banner-img-one {
+        background-image: url("../img/home-one/1756561116.png"); /* Ваше мобильное изображение */
+        background-size: cover;
+        background-position: center top; /* Можно скорректировать позицию */
+    }
+}
